@@ -1,0 +1,329 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>欢乐英雄转</title>
+		<link href="css/video-js.min.css" rel="stylesheet">
+		<style>
+			body {
+				background-color: #191919
+			}
+			.m {
+				width: 960px;
+				height: 400px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 100px;
+			}
+		</style>
+	</head>
+
+	<body align="center">
+		<div id="videobox" align="center">
+			<video id="my-video" class="video-js" controls preload="auto" data-setup="{}">
+				<source id="source" src="http://vfile.hljtv.com/2016/1481/5015/6140/148150156140.ssm/148150156140.m3u8" type="application/x-mpegURL"/>
+			</video>
+			<script src="js/video.min.js"></script> 
+			<script type="text/javascript">
+				var myPlayer = videojs('my-video');
+				videojs("my-video").ready(function(){
+					var myPlayer = this;
+					myPlayer.play();
+				});
+				function changeVideo(url){
+					var player = videojs('my-video');
+					player.pause();
+					player.dispose();
+					document.getElementById('videobox').innerHTML = '';
+					var str2 = `
+					<video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto">
+							<source id="source" src="${url}" type="application/x-mpegURL">
+					</video>
+					`;
+					document.getElementById('videobox').innerHTML = str2;
+					videojs('my-video', {
+						bigPlayButton: true,
+						textTrackDisplay: false,
+						posterImage: false,
+						errorDisplay: false
+					},function(){
+						this.play();
+					})
+				}
+			</script>
+		</div>
+		<div>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/5015/6140/148150156140.ssm/148150156140.m3u8')">20160925</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/5015/6316/148150156316.ssm/148150156316.m3u8')">20160924</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/5020/4160/148150204160.ssm/148150204160.m3u8')">20160923</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4865/5693/148148655693.ssm/148148655693.m3u8')">20160922</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4817/5553/148148175553.ssm/148148175553.m3u8')">20160921</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4741/9227/148147419227.ssm/148147419227.m3u8')">20160920</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4681/8841/148146818841.ssm/148146818841.m3u8')">20160919</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4613/4989/148146134989.ssm/148146134989.m3u8')">20160918</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4528/2497/148145282497.ssm/148145282497.m3u8')">20160917</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4528/2655/148145282655.ssm/148145282655.m3u8')">20160916</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4531/8477/148145318477.ssm/148145318477.m3u8')">20160915</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4531/8595/148145318595.ssm/148145318595.m3u8')">20160914</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4349/4297/148143494297.ssm/148143494297.m3u8')">20160913</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4319/4131/148143194131.ssm/148143194131.m3u8')">20160912</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4355/4312/148143554312.ssm/148143554312.m3u8')">20160911</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4355/4177/148143554177.ssm/148143554177.m3u8')">20160910</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4271/3831/148142713831.ssm/148142713831.m3u8')">20160909</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4169/3466/148141693466.ssm/148141693466.m3u8')">20160908</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4111/7222/148141117222.ssm/148141117222.m3u8')">20160907</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4078/1227/148140781227.ssm/148140781227.m3u8')">20160906</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4026/5239/148140265239.ssm/148140265239.m3u8')">20160905</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/3936/5235/148139365235.ssm/148139365235.m3u8')">20160904</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4015/7115/148140157115.ssm/148140157115.m3u8')">20160903</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/4026/5154/148140265154.ssm/148140265154.m3u8')">20160902</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/3826/1017/148138261017.ssm/148138261017.m3u8')">20160901</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/3760/0999/148137600999.ssm/148137600999.m3u8')">20160831</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/3689/2773/148136892773.ssm/148136892773.m3u8')">20160830</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/3607/6346/148136076346.ssm/148136076346.m3u8')">20160829</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/3523/6124/148135236124.ssm/148135236124.m3u8')">20160828</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/3553/6131/148135536131.ssm/148135536131.m3u8')">20160827</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/3538/0144/148135380144.ssm/148135380144.m3u8')">20160826</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/3399/9561/148133999561.ssm/148133999561.m3u8')">20160825</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/3331/5433/148133315433.ssm/148133315433.m3u8')">20160824</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/3289/5282/148132895282.ssm/148132895282.m3u8')">20160823</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/3201/8886/148132018886.ssm/148132018886.m3u8')">20160822</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/3084/2532/148130842532.ssm/148130842532.m3u8')">20160821</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/3087/8535/148130878535.ssm/148130878535.m3u8')">20160820</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/3090/2573/148130902573.ssm/148130902573.m3u8')">20160819</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/2942/6327/148129426327.ssm/148129426327.m3u8')">20160818</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/2904/2274/148129042274.ssm/148129042274.m3u8')">20160817</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/2842/9834/148128429834.ssm/148128429834.m3u8')">20160816</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/2791/4122/148127914122.ssm/148127914122.m3u8')">20160815</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/2667/7639/148126677639.ssm/148126677639.m3u8')">20160814</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/2667/7866/148126677866.ssm/148126677866.m3u8')">20160813</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/2670/1665/148126701665.ssm/148126701665.m3u8')">20160812</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/2566/9437/148125669437.ssm/148125669437.m3u8')">20160811</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/2503/3033/148125033033.ssm/148125033033.m3u8')">20160810</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/2434/8758/148124348758.ssm/148124348758.m3u8')">20160809</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/2386/8846/148123868846.ssm/148123868846.m3u8')">20160808</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/2301/6463/148123016463.ssm/148123016463.m3u8')">20160807</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/2307/6235/148123076235.ssm/148123076235.m3u8')">20160806</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/2307/6438/148123076438.ssm/148123076438.m3u8')">20160805</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/2172/0238/148121720238.ssm/148121720238.m3u8')">20160804</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/2137/2338/148121372338.ssm/148121372338.m3u8')">20160803</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/2064/0048/148120640048.ssm/148120640048.m3u8')">20160802</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/2008/8025/148120088025.ssm/148120088025.m3u8')">20160801</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/1921/1539/148119211539.ssm/148119211539.m3u8')">20160731</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/1921/1434/148119211434.ssm/148119211434.m3u8')">20160730</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/1969/1845/148119691845.ssm/148119691845.m3u8')">20160729</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/1823/9134/148118239134.ssm/148118239134.m3u8')">20160728</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/1765/0932/148117650932.ssm/148117650932.m3u8')">20160727</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/1719/4939/148117194939.ssm/148117194939.m3u8')">20160726</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/1648/6634/148116486634.ssm/148116486634.m3u8')">20160725</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/1569/4327/148115694327.ssm/148115694327.m3u8')">20160724</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/1563/4537/148115634537.ssm/148115634537.m3u8')">20160723</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/1569/4244/148115694244.ssm/148115694244.m3u8')">20160722</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/1442/1845/148114421845.ssm/148114421845.m3u8')">20160721</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/1379/7636/148113797636.ssm/148113797636.m3u8')">20160720</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/1324/5481/148113245481.ssm/148113245481.m3u8')">20160719</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/1234/5136/148112345136.ssm/148112345136.m3u8')">20160718</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/1143/2680/148111432680.ssm/148111432680.m3u8')">20160717</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/1152/8736/148111528736.ssm/148111528736.m3u8')">20160716</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/1152/8832/148111528832.ssm/148111528832.m3u8')">20160715</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/1034/0325/148110340325.ssm/148110340325.m3u8')">20160714</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/0974/0287/148109740287.ssm/148109740287.m3u8')">20160713</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/0926/0058/148109260058.ssm/148109260058.m3u8')">20160712</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/0846/7636/148108467636.ssm/148108467636.m3u8')">20160711</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/0761/5418/148107615418.ssm/148107615418.m3u8')">20160710</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/0771/1376/148107711376.ssm/148107711376.m3u8')">20160709</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/0771/1484/148107711484.ssm/148107711484.m3u8')">20160708</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/0675/1250/148106751250.ssm/148106751250.m3u8')">20160707</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/0607/8994/148106078994.ssm/148106078994.m3u8')">20160706</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/0527/4868/148105274868.ssm/148105274868.m3u8')">20160705</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/0418/2857/148104182857.ssm/148104182857.m3u8')">20160704</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/0351/0647/148103510647.ssm/148103510647.m3u8')">20160703</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/0345/0752/148103450752.ssm/148103450752.m3u8')">20160702</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/0345/0657/148103450657.ssm/148103450657.m3u8')">20160701</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/0217/7866/148102177866.ssm/148102177866.m3u8')">20160630</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/0397/8736/148103978736.ssm/148103978736.m3u8')">20160629</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/0077/3473/148100773473.ssm/148100773473.m3u8')">20160628</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1481/0008/9253/148100089253.ssm/148100089253.m3u8')">20160627</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/9932/1135/148099321135.ssm/148099321135.m3u8')">20160626</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/9933/3231/148099333231.ssm/148099333231.m3u8')">20160625</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/9940/5263/148099405263.ssm/148099405263.m3u8')">20160624</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/9798/8772/148097988772.ssm/148097988772.m3u8')">20160623</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/9712/4351/148097124351.ssm/148097124351.m3u8')">20160622</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/9642/8349/148096428349.ssm/148096428349.m3u8')">20160621</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/8961/0063/148089610063.ssm/148089610063.m3u8')">20160609</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/8980/2278/148089802278.ssm/148089802278.m3u8')">20160608</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/8834/9936/148088349936.ssm/148088349936.m3u8')">20160607</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/8750/9557/148087509557.ssm/148087509557.m3u8')">20160606</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/8744/9734/148087449734.ssm/148087449734.m3u8')">20160605</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/8680/1513/148086801513.ssm/148086801513.m3u8')">20160604</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/8682/5437/148086825437.ssm/148086825437.m3u8')">20160603</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/8548/1369/148085481369.ssm/148085481369.m3u8')">20160602</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/8468/9217/148084689217.ssm/148084689217.m3u8')">20160601</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/8422/1735/148084221735.ssm/148084221735.m3u8')">20160531</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/8350/1016/148083501016.ssm/148083501016.m3u8')">20160530</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/8236/0786/148082360786.ssm/148082360786.m3u8')">20160529</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/8242/0566/148082420566.ssm/148082420566.m3u8')">20160528</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/8242/0895/148082420895.ssm/148082420895.m3u8')">20160527</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/8146/0490/148081460490.ssm/148081460490.m3u8')">20160526</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/8071/6228/148080716228.ssm/148080716228.m3u8')">20160525</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/8004/4096/148080044096.ssm/148080044096.m3u8')">20160524</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/7931/1924/148079311924.ssm/148079311924.m3u8')">20160523</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/7847/1732/148078471732.ssm/148078471732.m3u8')">20160522</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/7854/3737/148078543737.ssm/148078543737.m3u8')">20160521</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/7854/3515/148078543515.ssm/148078543515.m3u8')">20160520</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/7681/5232/148076815232.ssm/148076815232.m3u8')">20160519</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/7604/7038/148076047038.ssm/148076047038.m3u8')">20160518</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/7541/1434/148075411434.ssm/148075411434.m3u8')">20160517</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/7436/6630/148074366630.ssm/148074366630.m3u8')">20160516</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/7419/8477/148074198477.ssm/148074198477.m3u8')">20160515</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/7404/2736/148074042736.ssm/148074042736.m3u8')">20160514</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/7419/8587/148074198587.ssm/148074198587.m3u8')">20160513</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/7214/6093/148072146093.ssm/148072146093.m3u8')">20160512</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/7129/3974/148071293974.ssm/148071293974.m3u8')">20160511</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/7060/9984/148070609984.ssm/148070609984.m3u8')">20160510</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/6976/9665/148069769665.ssm/148069769665.m3u8')">20160509</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/6904/9074/148069049074.ssm/148069049074.m3u8')">20160508</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/6904/9116/148069049116.ssm/148069049116.m3u8')">20160507</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/6912/1176/148069121176.ssm/148069121176.m3u8')">20160506</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/6729/7375/148067297375.ssm/148067297375.m3u8')">20160505</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/6642/0938/148066420938.ssm/148066420938.m3u8')">20160504</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/6552/0566/148065520566.ssm/148065520566.m3u8')">20160503</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/6453/6384/148064536384.ssm/148064536384.m3u8')">20160502</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/6453/6455/148064536455.ssm/148064536455.m3u8')">20160501</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/6450/0263/148064500263.ssm/148064500263.m3u8')">20160430</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/6438/0247/148064380247.ssm/148064380247.m3u8')">20160429</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/6254/3776/148062543776.ssm/148062543776.m3u8')">20160428</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/6158/3551/148061583551.ssm/148061583551.m3u8')">20160427</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/6099/5579/148060995579.ssm/148060995579.m3u8')">20160426</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/6027/5438/148060275438.ssm/148060275438.m3u8')">20160425</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/5925/5068/148059255068.ssm/148059255068.m3u8')">20160424</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/5935/0977/148059350977.ssm/148059350977.m3u8')">20160423</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/5935/1233/148059351233.ssm/148059351233.m3u8')">20160422</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/5755/0557/148057550557.ssm/148057550557.m3u8')">20160421</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/5661/4540/148056614540.ssm/148056614540.m3u8')">20160420</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/5572/6233/148055726233.ssm/148055726233.m3u8')">20160419</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/5484/9680/148054849680.ssm/148054849680.m3u8')">20160418</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/5388/9333/148053889333.ssm/148053889333.m3u8')">20160417</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/5388/9447/148053889447.ssm/148053889447.m3u8')">20160416</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/5398/5387/148053985387.ssm/148053985387.m3u8')">20160415</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/5226/8871/148052268871.ssm/148052268871.m3u8')">20160414</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/5176/4924/148051764924.ssm/148051764924.m3u8')">20160413</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/5088/8820/148050888820.ssm/148050888820.m3u8')">20160412</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/5018/0419/148050180419.ssm/148050180419.m3u8')">20160411</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/4950/8060/148049508060.ssm/148049508060.m3u8')">20160410</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/4953/1819/148049531819.ssm/148049531819.m3u8')">20160409</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/4953/1920/148049531920.ssm/148049531920.m3u8')">20160408</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/4769/5782/148047695782.ssm/148047695782.m3u8')">20160407</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/4696/3574/148046963574.ssm/148046963574.m3u8')">20160406</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/4579/9232/148045799232.ssm/148045799232.m3u8')">20160405</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/4471/8876/148044718876.ssm/148044718876.m3u8')">20160404</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/4471/8938/148044718938.ssm/148044718938.m3u8')">20160403</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/4476/6844/148044766844.ssm/148044766844.m3u8')">20160402</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/4476/7043/148044767043.ssm/148044767043.m3u8')">20160401</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/4683/1538/148046831538.ssm/148046831538.m3u8')">20160331</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/4683/1652/148046831652.ssm/148046831652.m3u8')">20160330</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/4686/7539/148046867539.ssm/148046867539.m3u8')">20160329</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/4686/7737/148046867737.ssm/148046867737.m3u8')">20160328</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/3971/3567/148039713567.ssm/148039713567.m3u8')">20160327</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/3973/7448/148039737448.ssm/148039737448.m3u8')">20160326</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/3973/7570/148039737570.ssm/148039737570.m3u8')">20160325</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/3816/5398/148038165398.ssm/148038165398.m3u8')">20160324</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/3721/7366/148037217366.ssm/148037217366.m3u8')">20160323</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/3631/7147/148036317147.ssm/148036317147.m3u8')">20160322</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/3544/1185/148035441185.ssm/148035441185.m3u8')">20160321</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/3431/2718/148034312718.ssm/148034312718.m3u8')">20160320</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/3433/6837/148034336837.ssm/148034336837.m3u8')">20160319</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/3433/6994/148034336994.ssm/148034336994.m3u8')">20160318</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/3242/8365/148032428365.ssm/148032428365.m3u8')">20160317</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/3117/9590/148031179590.ssm/148031179590.m3u8')">20160316</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/3018/3586/148030183586.ssm/148030183586.m3u8')">20160315</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/2937/9438/148029379438.ssm/148029379438.m3u8')">20160314</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/2834/7318/148028347318.ssm/148028347318.m3u8')">20160313</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/2841/9213/148028419213.ssm/148028419213.m3u8')">20160312</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/2852/7489/148028527489.ssm/148028527489.m3u8')">20160311</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/2604/2832/148026042832.ssm/148026042832.m3u8')">20160309</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/2520/2425/148025202425.ssm/148025202425.m3u8')">20160308</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/2444/6099/148024446099.ssm/148024446099.m3u8')">20160307</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/2347/3539/148023473539.ssm/148023473539.m3u8')">20160306</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/2347/3738/148023473738.ssm/148023473738.m3u8')">20160305</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/2353/3539/148023533539.ssm/148023533539.m3u8')">20160304</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/2208/1517/148022081517.ssm/148022081517.m3u8')">20160303</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/2106/1167/148021061167.ssm/148021061167.m3u8')">20160302</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/2029/2883/148020292883.ssm/148020292883.m3u8')">20160301</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/1942/8421/148019428421.ssm/148019428421.m3u8')">20160229</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/1850/4332/148018504332.ssm/148018504332.m3u8')">20160228</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/1845/6386/148018456386.ssm/148018456386.m3u8')">20160227</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/1844/4284/148018444284.ssm/148018444284.m3u8')">20160226</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/1641/5769/148016415769.ssm/148016415769.m3u8')">20160225</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/1553/9471/148015539471.ssm/148015539471.m3u8')">20160224</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/1588/7431/148015887431.ssm/148015887431.m3u8')">20160223</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/1169/8358/148011698358.ssm/148011698358.m3u8')">20160218</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/0879/3327/148008793327.ssm/148008793327.m3u8')">20160215</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/0912/9332/148009129332.ssm/148009129332.m3u8')">20160212</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/0910/5345/148009105345.ssm/148009105345.m3u8')">20160209</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/0736/5021/148007365021.ssm/148007365021.m3u8')">20160206</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/0300/8620/148003008620.ssm/148003008620.m3u8')">20160204</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/0197/6443/148001976443.ssm/148001976443.m3u8')">20160203</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/0124/4352/148001244352.ssm/148001244352.m3u8')">20160202</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/0003/1810/148000031810.ssm/148000031810.m3u8')">20160201</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/9952/7731/147999527731.ssm/147999527731.m3u8')">20160131</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/0003/1729/148000031729.ssm/148000031729.m3u8')">20160130</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1480/0001/9822/148000019822.ssm/148000019822.m3u8')">20160129</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/9485/9184/147994859184.ssm/147994859184.m3u8')">20160124</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/9501/5162/147995015162.ssm/147995015162.m3u8')">20160123</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/9505/1133/147995051133.ssm/147995051133.m3u8')">20160122</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/9350/3114/147993503114.ssm/147993503114.m3u8')">20160121</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/9280/6968/147992806968.ssm/147992806968.m3u8')">20160120</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/9193/0635/147991930635.ssm/147991930635.m3u8')">20160119</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/9116/2570/147991162570.ssm/147991162570.m3u8')">20160118</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/9104/2437/147991042437.ssm/147991042437.m3u8')">20160117</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/9103/0454/147991030454.ssm/147991030454.m3u8')">20160116</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/9056/2433/147990562433.ssm/147990562433.m3u8')">20160115</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/8830/5663/147988305663.ssm/147988305663.m3u8')">20160114</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/8760/9532/147987609532.ssm/147987609532.m3u8')">20160113</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/8684/1460/147986841460.ssm/147986841460.m3u8')">20160112</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/8582/0617/147985820617.ssm/147985820617.m3u8')">20160111</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/8582/0856/147985820856.ssm/147985820856.m3u8')">20160110</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/8595/2637/147985952637.ssm/147985952637.m3u8')">20160109</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/8387/6010/147983876010.ssm/147983876010.m3u8')">20160107</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/8389/9898/147983899898.ssm/147983899898.m3u8')">20160106</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/8059/9114/147980599114.ssm/147980599114.m3u8')">20160102</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/8070/7181/147980707181.ssm/147980707181.m3u8')">20160101</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2016/1479/8070/7355/147980707355.ssm/147980707355.m3u8')">20151231</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2017/1489/4436/6895/148944366895.ssm/148944366895.m3u8')">20111215</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2017/1489/4337/6538/148943376538.ssm/148943376538.m3u8')">20111214</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2017/1489/4289/0229/148942890229.ssm/148942890229.m3u8')">20111212</button>
+			<br>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2017/1489/4269/2031/148942692031.ssm/148942692031.m3u8')">20111211</button>
+			<button onclick="changeVideo('http://vfile.hljtv.com/2017/1489/4269/2082/148942692082.ssm/148942692082.m3u8')">20111210</button>
+		</div>
+	</body>
+</html>
